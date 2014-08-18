@@ -15,7 +15,7 @@ Person.prototype.work = function() {
 var tony = new Person({
   name: 'Tony Brown',
   age: 47,
-  occupation: 'JavaScript Developer'
+  occupation: 'JavaScript Developer!'
 });
 
 var klaudia = new Person({
