@@ -39,24 +39,33 @@
       <p>Love One Another.</p>
     </div>
     <div class="container">
-      <code>
-        var Person = Backbone.Model.extend({<br>
-          &nbsp;defaults: {<br>
-          &nbsp;name: 'John Doe',<br>
-          &nbsp;age: 30,<br>
-          &nbsp;occupation: 'IT admin'<br>
-          &nbsp;}<br>
-        });<br>
+      <div class="col-lg-6 well well-lg">
+        <code>
+          var Person = Backbone.Model.extend({<br>
+            &nbsp;defaults: {<br>
+            &nbsp;name: 'John Doe',<br>
+            &nbsp;age: 30,<br>
+            &nbsp;occupation: 'IT admin'<br>
+            &nbsp;}<br>
+          });<br>
 
-        var person = new Person();<br />
+          var person = new Person();<br />
 
-        var output = document.getElementById('output');<br />
-      </code>
+          var output = document.getElementById('output');<br />
+
+          output.innerHTML += person.get('name');<br />
+
+          output.innerHTML += person.get('occupation');<br />
+
+        </code>
+      </div>
       <ul class='row' id="output"></ul>
     </div>
   </div>
   <div class="footer">
-    <p class="muted">Sticky Footer.</p>
+    <div class='container'>
+      <p class="muted">Sticky Footer.</p>
+    </div>
   </div>
   <script src='assets/js/libs/jquery.js'></script>
   <script src='assets/js/libs/bootstrap.js'></script>
