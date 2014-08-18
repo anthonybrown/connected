@@ -56,10 +56,26 @@
           output.innerHTML += person.get('name');<br />
 
           output.innerHTML += person.get('occupation');<br />
-
         </code>
+
       </div>
       <ul class='col-lg-12 col-md-12 col-sm-12' id="output"></ul>
+    </div>
+    <div class="container">
+      <div class="col-lg-8 col-md-8 well well-lg">
+        <code>
+          var tony = new Person({<br>
+          &nbsp;name: 'Tony',<br>
+          &nbsp;age: 47,<br>
+          &nbsp;occupation: 'JavaScript Developer'<br>
+          &nbsp;});<br>
+
+          output.innerHTML += 'My name is: ' + tony.get('name');<br>
+          output.innerHTML += 'I am ' + tony.get('age')+ ' years old';<br>
+          output.innerHTML += 'I work as a ' + tony.get('occupation');<br>
+          output.innerHTML +=  tony.work();
+        </code>
+      </div>
     </div>
   </div>
   <div class="footer">
