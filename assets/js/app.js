@@ -12,6 +12,15 @@ Person.prototype.work = function() {
   return this.name + ' works as a ' + this.occupation;
 };
 
+var output = document.getElementById('output');
+// document.ready needs to be invoked before jQuery will work
+// I prefere to use vanilla JavaScript here because output will be undefined
+// at the body where innerHTML is used.
+
+//$(function() {
+//  var output = $('#output');
+//});
+
 var tony = new Person({
   name: 'Tony Brown',
   age: 47,
@@ -33,5 +42,6 @@ var jacob = new Person({
 console.log(tony.name + '\n'+ tony.age +'\n' + tony.work());
 console.log(klaudia.name + '\n' + klaudia.age + '\n' + klaudia.work());
 console.log(jacob.name + '\n'+ jacob.age + '\n' + jacob.work());
-
-
+output.innerHTML += '<br />'+  tony.name + '<br />' + tony.age + '<br />' + tony.work() + '<br />';
+output.innerHTML += '<br />'+ klaudia.name + '<br />' + klaudia.age + '<br />' + klaudia.work() + '<br />';
+output.innerHTML += '<br />'+  jacob.name + '<br />' + jacob.age + '<br />' + jacob.work() + '<br />';
