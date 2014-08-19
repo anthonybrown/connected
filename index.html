@@ -54,9 +54,14 @@
               &nbsp;if (attrs.age < 0) {<br>
               &nbsp;var output = $('#output');<br>
               &nbsp;&nbsp;return output.append('Please provide a valid age.');<br>
-                  &nbsp;&nbsp;}<br>
+                  &nbsp;&nbsp;},<br>
+              &nbsp;if (! attrs.name) {<br>
+              &nbsp;var output = $('#output');<br>
+              &nbsp;&nbsp;return output.append('Everyone has a name, what is yours?');<br>
+              &nbsp;&nbsp;}<br>
+
               &nbsp;}<br>
-          });<br>
+              });<br><br>
 
           var person = new Person();<br />
 
