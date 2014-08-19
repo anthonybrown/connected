@@ -13,6 +13,12 @@ var Person = Backbone.Model.extend({
       return output.append('<p class="err"><i><b>Please provide a valid age.</b></i></p>')+
       console.log('age must be positive');
     }
+
+    if (! attrs.name) {
+      var output = $('#output');
+      return output.append('<p class="err"><i><b>Everyone has a name, what is yours?</b></i></p>')+
+      console.log('What\'s your name?');
+    }
   },
 
   work: function () {
