@@ -36,8 +36,8 @@ var tony = new Person({
   occupation: 'JavaScript Developer'
 });
 
-output.innerHTML += '<br>My name is: ' + tony.get('name')+ '.';+'<br>'
-output.innerHTML += '<br>I am ' + tony.get('age')+ ' years old.';+'<br>'
-output.innerHTML += '<br>I work as a ' + tony.get('occupation')+ '.';+'<br>'
-output.innerHTML += '<br>' + tony.work() +'.'+ '<br>';
+output2.innerHTML += '<br>My name is: ' + tony.get('name')+ '.';+'<br>'
+output2.innerHTML += '<br>I am ' + tony.get('age')+ ' years old.';+'<br>'
+output2.innerHTML += '<br>I work as a ' + tony.get('occupation')+ '.';+'<br>'
+output2.innerHTML += '<br>' + tony.work() +'.'+ '<br>';
 console.log(tony.toJSON());
