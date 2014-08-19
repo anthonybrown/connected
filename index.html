@@ -47,19 +47,30 @@
             &nbsp;age: 30,<br>
             &nbsp;occupation: 'IT admin'<br>
             &nbsp;},<br><br>
-            work: function () {
-              &nbsp;return this.get('name') + ' is working as a '+ this.get('occupation');
-            }
-            <br>
+            work: function () {<br>
+            &nbsp;return this.get('name') + ' is working as a '+ this.get('occupation');<br>
+              }, <br><br>
+              validate: function (attrs) {<br>
+              &nbsp;if (attrs.age < 0) {<br>
+              &nbsp;var output = $('#output');<br>
+              &nbsp;&nbsp;return output.append('Please provide a valid age.');<br>
+                  &nbsp;&nbsp;}<br>
+              &nbsp;}<br>
           });<br>
 
           var person = new Person();<br />
+
+          person.set('age', -30, {validate: true});<br>
 
           var output = document.getElementById('output');<br />
 
           output.innerHTML += person.get('name');<br />
 
+          output.innerHTML += person.get('age');<br />
+
           output.innerHTML += person.get('occupation');<br />
+
+          output.innerHTML += person.work();<br />
         </code>
 
       </div>

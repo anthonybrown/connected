@@ -7,6 +7,13 @@ var Person = Backbone.Model.extend({
     occupation: 'IT admin'
   },
 
+  validate: function (attrs) {
+    if (attrs.age < 0) {
+      var output = $('#output');
+      return output.append('Please provide a valid age.');
+    }
+  },
+
   work: function () {
     return this.get('name') + ' is working as a ' + this.get('occupation');
   }
@@ -15,9 +22,13 @@ var Person = Backbone.Model.extend({
 var person = new Person();
 
 var output = document.getElementById('output');
+person.set('age', -30, {validate: true});
 
-output.innerHTML += person.get('name')+'<br />';
+output.innerHTML += '<br>'+person.get('name')+'<br />';
+output.innerHTML += person.get('age')+ '<br />';
 output.innerHTML += person.get('occupation')+ '<br />';
+output.innerHTML += person.work()+ '<br />';
+output.innerHTML += person.set('age', -30, {validate: true});
 
 var tony = new Person({
   name: 'Tony',
@@ -25,8 +36,8 @@ var tony = new Person({
   occupation: 'JavaScript Developer'
 });
 
-output.innerHTML += '<br>My name is: ' + tony.get('name')+ '<br>';
-output.innerHTML += '<br>I am ' + tony.get('age')+ ' years old<br>';
-output.innerHTML += '<br>I work as a ' + tony.get('occupation')+ '<br>';
-output.innerHTML += '<br>' + tony.work() + '<br>';
-output.innerHTML += tony.toJSON();
+output.innerHTML += '<br>My name is: ' + tony.get('name')+ '.';+'<br>'
+output.innerHTML += '<br>I am ' + tony.get('age')+ ' years old.';+'<br>'
+output.innerHTML += '<br>I work as a ' + tony.get('occupation')+ '.';+'<br>'
+output.innerHTML += '<br>' + tony.work() +'.'+ '<br>';
+console.log(tony.toJSON());
