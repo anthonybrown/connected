@@ -39,7 +39,7 @@
       <p>Love One Another.</p>
     </div>
     <div class="container">
-      <div class="col-lg-10 col-md-8 well well-lg">
+      <div class="col-lg-8 col-md-8 well well-lg">
         <code>
           var Person = Backbone.Model.extend({<br>
             &nbsp;defaults: {<br>
@@ -80,11 +80,11 @@
       <div class="col-lg-8 col-md-8 well well-lg">
         <code>
           var output2 = document.getElementById('output2');<br>
-          var tony = new Person({<br>
-          &nbsp;name: 'Tony',<br>
-          &nbsp;age: 47,<br>
-          &nbsp;occupation: 'JavaScript Developer'<br>
-          &nbsp;});<br>
+          &nbsp;var tony = new Person({<br>
+          &nbsp;&nbsp;name: 'Tony',<br>
+          &nbsp;&nbsp;age: 47,<br>
+          &nbsp;&nbsp;occupation: 'JavaScript Developer'<br>
+          &nbsp;});<br><br>
 
           output.innerHTML += 'My name is: ' + tony.get('name');<br>
           output.innerHTML += 'I am ' + tony.get('age')+ ' years old';<br>

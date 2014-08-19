@@ -10,7 +10,8 @@ var Person = Backbone.Model.extend({
   validate: function (attrs) {
     if (attrs.age < 0) {
       var output = $('#output');
-      return output.append('Please provide a valid age.');
+      return output.append('<p class="err"><i><b>Please provide a valid age.</b></i></p>')+
+      console.log('age must be positive');
     }
   },
 
@@ -22,6 +23,7 @@ var Person = Backbone.Model.extend({
 var person = new Person();
 
 var output = document.getElementById('output');
+var output2 = document.getElementById('output2');
 person.set('age', -30, {validate: true});
 
 output.innerHTML += '<br>'+person.get('name')+'<br />';
@@ -36,8 +38,10 @@ var tony = new Person({
   occupation: 'JavaScript Developer'
 });
 
-output2.innerHTML += '<br>My name is: ' + tony.get('name')+ '.';+'<br>'
-output2.innerHTML += '<br>I am ' + tony.get('age')+ ' years old.';+'<br>'
-output2.innerHTML += '<br>I work as a ' + tony.get('occupation')+ '.';+'<br>'
+//tony.set('age', -47, {validate: true});
+
+output2.innerHTML += '<br>My name is: ' + tony.get('name')+ '.';
+output2.innerHTML += '<br>I am ' + tony.get('age')+ ' years old.';
+output2.innerHTML += '<br>I work as a ' + tony.get('occupation')+ '.';
 output2.innerHTML += '<br>' + tony.work() +'.'+ '<br>';
 console.log(tony.toJSON());
