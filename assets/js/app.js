@@ -31,7 +31,7 @@ var person = new Person();
 var output = document.getElementById('output');
 var output2 = document.getElementById('output2');
 person.set('age', -30, {validate: true});
-
+person.set('name', '', {validate: true});
 output.innerHTML += '<br>'+person.get('name')+'<br />';
 output.innerHTML += person.get('age')+ '<br />';
 output.innerHTML += person.get('occupation')+ '<br />';
