@@ -15,6 +15,8 @@ var Person = Backbone.Model.extend({
     }
 
     if (! attrs.name) {
+      // this is bad practice, mixing in view stuff with the data
+      // done here only for outputting the results in a visible manner
       var output = $('#output');
       return output.append('<p class="err"><i><b>Everyone has a name, what is yours?</b></i></p>')+
       console.log('What\'s your name?');
