@@ -18,10 +18,37 @@ body {
   text-align: center
 }
 
+.code {
+ width: 70%;
+ min-width: 550px;
+ max-width: 740px;
+ font-size: 87.5%;/*14px*/
+ border-radius: 7px;
+ margin: 3em 0 1em 0;
+}
+
 /*==========================================================================
    Footer Styles
    Author Me
   ========================================================================*/
+.go-top {
+  position: fixed;
+  bottom: 0.5em;
+  right: 4em;
+  text-decoration: none;
+  color: #fff;
+  text-shadow: -1px -1px 0 #888;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  padding: 1em;
+  display: none;
+  border-radius: 5px;
+}
+
+.go-top:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
 
   .footer {
     /*position: absolute;

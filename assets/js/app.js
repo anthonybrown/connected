@@ -1,3 +1,23 @@
+    $(function() {
+    // Show or hide the sticky footer button
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 200) {
+          $('.go-top').fadeIn(300);
+        } else {
+          $('.go-top').fadeOut(300);
+        }
+      });
+
+      // Animate the scroll to top
+      $('.go-top').click(function(e) {
+        e.preventDefault();
+
+        $('html, body').animate({
+          scrollTop: 0
+        }, 900);
+      });
+    });
+
 // Using Backbone Models
 
 var Person = Backbone.Model.extend({

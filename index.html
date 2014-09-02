@@ -7,10 +7,12 @@
   <meta name="description" content="Backbonejs, underscorejs">
   <meta name="author" content="Tony Brown">
   <link rel="stylesheet" href="assets/css/bootstrap.css" />
+  <link rel="stylesheet" href="assets/css/tomorrow-night.css">
   <link rel="stylesheet" href="assets/css/main.css" />
+  <script src='assets/js/libs/prettify.js'></script>
   <title>Connected to the Backbone.</title>
 </head>
-<body>
+<body onload='prettyPrint()'>
   <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <div class="container">
       <div class="navbar-header">
@@ -39,8 +41,8 @@
       <p>Love One Another.</p>
     </div>
     <div class="container">
-      <div class="col-lg-8 col-md-8 well well-lg">
-        <code>
+      <div class="">
+        <pre class='prettyprint linenums code'>
           var Person = Backbone.Model.extend({<br>
             &nbsp;defaults: {<br>
             &nbsp;name: 'John Doe',<br>
@@ -76,14 +78,14 @@
           output.innerHTML += person.get('occupation');<br />
 
           output.innerHTML += person.work();<br />
-        </code>
+        </pre>
 
       </div>
       <ul class='col-lg-12 col-md-12 col-sm-12' id="output"></ul>
     </div>
     <div class="container clearfix">
-      <div class="col-lg-8 col-md-8 well well-lg">
-        <code>
+      <div class="">
+        <pre class='prettyprint linenums code'>
           var output2 = document.getElementById('output2');<br>
           &nbsp;var tony = new Person({<br>
           &nbsp;&nbsp;name: 'Tony',<br>
@@ -95,7 +97,7 @@
           output.innerHTML += 'I am ' + tony.get('age')+ ' years old';<br>
           output.innerHTML += 'I work as a ' + tony.get('occupation');<br>
           output.innerHTML +=  tony.work();<br>
-        </code>
+        </pre>
       </div>
       <ul id="output2" class='col-lg-12 col-md-12 col-sm-12'></ul>
     </div>
@@ -103,6 +105,7 @@
   <div class="footer">
     <div class='container'>
       <p class="muted">Footer.</p>
+      <a class='go-top' href="#top">go top</a>
     </div>
   </div>
   <script src='assets/js/libs/jquery.js'></script>
